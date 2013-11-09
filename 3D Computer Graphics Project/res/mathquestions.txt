@@ -1,0 +1,5 @@
+What is 150 divided by 5?==30
+What is 222 + 83?==305
+What is 50% of 500?==250
+What is the square root of 9?==3
+What is 11 x 11?==121

@@ -1,0 +1,193 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height= "wrap_content"
+    android:stretchColumns="*" 
+    android:padding="5dp">
+    
+    
+    <TableRow
+        	android:layout_width="wrap_content"	
+        	android:layout_height="wrap_content" 
+        	android:gravity="fill_horizontal" 
+        	android:background="#adff2f">
+        	<TextView 
+       			android:id="@+id/date" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="match_parent"
+       			android:text="Date:" 
+       			android:textSize="15sp" />
+   </TableRow>
+   <TableRow
+        	android:layout_width="wrap_content"	
+        	android:layout_height="wrap_content" 
+        	android:gravity="fill_horizontal" 
+        	android:background="#e0ffff">        	
+    	    <TextView 
+       			android:id="@+id/electext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="ELECTRICITY" 
+       			android:textSize="10sp"/>
+    	    <ImageView
+           		android:id = "@+id/elecreceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for electricity" 
+           		android:adjustViewBounds="true"
+           		android:src="@drawable/receipt"/>
+    	    <TextView 
+       			android:id="@+id/groctext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="GROCERIES"
+       			android:textSize="10sp" />
+    	    <ImageView
+          		android:id = "@+id/grocreceipt" 
+          		android:layout_width="30dp" 
+          		android:layout_height="30dp"
+           		android:contentDescription="Receipt for groceries" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+    	    <TextView 
+       			android:id="@+id/insutext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="INSURANCE" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/insureceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for insurance" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+       </TableRow>     
+      
+       
+    	<TableRow
+        	android:layout_width="wrap_content"	
+        	android:layout_height="wrap_content" 
+        	android:gravity="fill_horizontal" 
+        	android:background="#98fb98">        	
+    	    <TextView 
+       			android:id="@+id/intertext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="INTERNET" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/interreceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for internet" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+    	    <TextView 
+       			android:id="@+id/leistext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="LEISURE" 
+       			android:textSize="10sp" />
+    	    <ImageView
+          		android:id = "@+id/leisreceipt" 
+          		android:layout_width="30dp" 
+          		android:layout_height="30dp"
+           		android:contentDescription="Receipt for leisure" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+    	    <TextView 
+       			android:id="@+id/loantext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="LOAN" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/loanreceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for loan" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>  	    
+       </TableRow>   	
+       
+    	<TableRow
+        	android:layout_width="wrap_content"	
+        	android:layout_height="wrap_content" 
+        	android:gravity="fill_horizontal" 
+        	android:background="#f0e68c">        	
+    	    <TextView 
+       			android:id="@+id/othertext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="OTHER" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/otherreceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for other expenses" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+    	    <TextView 
+       			android:id="@+id/renttext" 
+       			android:layout_width="wrap_content"
+       			android:layout_height="wrap_content"
+       			android:text="RENT"
+       			 android:textSize="10sp" />
+    	    <ImageView
+          		android:id = "@+id/rentreceipt" 
+          		android:layout_width="30dp" 
+          		android:layout_height="30dp"
+           		android:contentDescription="Receipt for rent" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>  
+    	    <TextView 
+       			android:id="@+id/teletext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="TELEPHONE" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/telereceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for telephone" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>  	    
+       </TableRow>    	
+       
+       <TableRow
+        	android:layout_width="wrap_content"	
+        	android:layout_height="wrap_content" 
+        	android:gravity="fill_horizontal" 
+        	android:background="#ffdab9">        	
+    	    <TextView 
+       			android:id="@+id/transtext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="TRANSPORT" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/transreceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for transport" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+    	    <TextView 
+       			android:id="@+id/utiltext" 
+       			android:layout_width="wrap_content" 
+       			android:layout_height="wrap_content"
+       			android:text="UTILITIES" 
+       			android:textSize="10sp" />
+    	    <ImageView
+           		android:id = "@+id/utilreceipt" 
+           		android:layout_width="30dp" 
+           		android:layout_height="30dp"
+           		android:contentDescription="Receipt for utilities" 
+           		android:adjustViewBounds="true" 
+           		android:src="@drawable/receipt"/>
+    	</TableRow>      
+
+</TableLayout>

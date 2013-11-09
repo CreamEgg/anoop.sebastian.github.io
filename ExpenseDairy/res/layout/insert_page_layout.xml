@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+       
+       <Spinner 
+            android:id="@+id/category"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" 
+            android:spinnerMode="dialog"/>   
+       
+        <Button 
+            android:id="@+id/insertdate"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textSize="20sp"
+            android:onClick="clickaction"/>   
+   
+        <TextView 
+            android:id="@+id/title"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:padding="3dp"
+            android:text="@string/newentry"
+            android:textSize="20sp"/>   
+        
+       <EditText 
+            android:id="@+id/newamount"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:hint="@string/enteramount"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>   
+        
+     <EditText 
+            android:id="@+id/newcomment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="@string/entercomment"            
+            android:textSize="20sp"
+            android:inputType="text"/>   
+   
+     <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/picture"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="@string/receiptbuttontext"
+            android:textSize="20sp"
+            android:onClick="Takephoto"
+            />
+        <ImageView 
+            android:id="@+id/receipt"
+            android:src="@drawable/receipt"
+            android:layout_height="50dp"
+            android:layout_width="50dp"  
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/icondescription"/>           
+    </LinearLayout>
+       
+        <Button
+            android:id="@+id/save"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/savebutton"
+            android:textSize="20sp"
+            android:onClick="clickaction"/>           
+    </LinearLayout>
+    
+</ScrollView>

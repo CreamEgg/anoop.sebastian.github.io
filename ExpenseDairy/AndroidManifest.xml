@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sebasta2.expensedairy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.sebasta2.expensedairy.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ParentActivity" ></activity>
+        <activity android:name=".HomePage" ></activity>
+        <activity android:name=".Information" ></activity>
+        <activity android:name=".InsertPage" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Camera" ></activity>
+        <activity android:name=".SearchPage"></activity>
+        <activity android:name=".GraphPage" android:screenOrientation="landscape"></activity>
+        <activity android:name=".SearchResultsPage" android:screenOrientation="landscape" ></activity>
+        <activity android:name=".ReceiptGalleryPage" ></activity>
+        <activity android:name=".GraphResultPage" android:screenOrientation="landscape"> </activity>
+        
+    </application>
+
+</manifest>

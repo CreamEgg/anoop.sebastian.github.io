@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Expense Dairy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Homepagetitle">Personal Expense Diary</string>
+    <string name="appdescription">Let’s imagine that your application needs to display a piece of text and a couple of buttons. The length of the text can vary and be longer or shorter than the screen. You want to put the text inside a scroll view and you want the buttons to scroll along with the text, probably to encourage the user to read the text before clicking any of the button. Depending on the length of the text, your application would look like one of the following screenshots.</string>
+    <string name="hometext2">Click a topic from the list below for more information.</string>
+    <string name="title">Personal Expense Diary</string>
+    <string name="creator">Developed by Anoop Sebastian</string>
+    <string name="newentry">Add New Entry</string>
+    <string name="enteramount">enter amount</string>
+    <string name="entercomment">enter comment</string>
+    <string name="receiptbuttontext">Record Receipt</string>
+    <string name="icondescription">an icon of a receipt</string>
+    <string name="savebutton">Save</string>
+    <string name="graphpagetitle">Graphing Tools</string>
+    <string name="graphbutton">Graph it !</string>
+
+</resources>
