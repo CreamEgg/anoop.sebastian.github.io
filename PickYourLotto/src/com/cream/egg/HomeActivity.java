@@ -22,11 +22,12 @@ public class HomeActivity extends Activity
 {
 	private AdView adView;
 	private static final String TAG = "HomeActivity";	
-	GridView lottoRow_1,lottoRow_2;
+	//GridView lottoRow_1,lottoRow_2;
 	Button pick,clear;
 	private Set<Integer> randomNumbers = null;
 	Integer[] numbers;
 	private static final int numbers_per_row = 6;
+	private static final String adID = "ca-app-pub-2142028847774056/1452609723";
 	private static final Integer[] icons = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four,
 						  R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight,
 						  R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve,
@@ -73,18 +74,16 @@ public class HomeActivity extends Activity
 
 	private void initialiseUI() 
 	{
-		lottoRow_1 = (GridView)findViewById(R.id.gridview1);
-		lottoRow_2 = (GridView)findViewById(R.id.gridview2);
+		//lottoRow_1 = (GridView)findViewById(R.id.gridview1);
+		//lottoRow_2 = (GridView)findViewById(R.id.gridview2);
 		
-		adView = new AdView(this, AdSize.BANNER,"ca-app-pub-2142028847774056/1452609723");
+		//adView = new AdView(this, AdSize.BANNER,"ca-app-pub-2142028847774056/1452609723");
+		adView = new AdView(this, AdSize.BANNER,adID);
 		LinearLayout layout = (LinearLayout)findViewById(R.id.homelayout);
 		
-		layout.addView(adView);
-		
+		layout.addView(adView);		
 		adView.loadAd(new AdRequest());
 		
-		//pick = (Button)findViewById(R.id.generate_button);
-		//clear = (Button)findViewById(R.id.reset_button);
 		Log.i(TAG, "UI Initialised");
 	}
 	
@@ -102,19 +101,22 @@ public class HomeActivity extends Activity
 	private Integer[] makeRandomNumbers()
 	{
 		randomNumbers.clear();
+		
 		Random randomNumberGenerator = new Random();
+		
 		while (randomNumbers.size() < numbers_per_row) {
 			randomNumbers.add(Integer.valueOf(randomNumberGenerator.nextInt(44)));
 		}
+		
 		Log.i(TAG, "Numbers generated: "+randomNumbers);
+		
 		Object[] objects = randomNumbers.toArray();
 		Integer[] arrays = new Integer[numbers_per_row];
 		for (int i=0; i<objects.length; i++)
 		{
 			arrays[i] = (Integer)objects[i];
 		}
-		return (arrays);
-		
+		return arrays;		
 	}
 
 	@Override

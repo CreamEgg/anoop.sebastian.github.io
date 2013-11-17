@@ -9,22 +9,11 @@
     <ImageView
         android:id="@+id/grid_item_image"
         android:src="@drawable/five"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:clickable="false"
         android:adjustViewBounds="true"
         android:layout_gravity="center">
     </ImageView>
  
-    <!--  
-    <TextView
-        android:id="@+id/grid_item_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Number"
-        android:layout_marginTop="5dp"
-        android:textSize="15dp" >
-    </TextView> -->
-    
-
-</LinearLayout>
+ </LinearLayout>

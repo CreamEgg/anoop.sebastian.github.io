@@ -13,32 +13,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HomeActivity" >
 
-   <!-- <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/generate_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="Pick" />
-        
-        <Button
-            android:id="@+id/reset_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="Reset" />        
-    </LinearLayout> -->
-
     <GridView
         android:id="@+id/gridview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:columnWidth="70dp"
+        android:columnWidth="100dp"
         android:gravity="center"
         android:numColumns="auto_fit"
         android:paddingBottom="5dp"
@@ -50,7 +30,7 @@
         android:id="@+id/gridview2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnWidth="70dp"
+        android:columnWidth="100dp"
         android:layout_weight="2"
         android:gravity="center"
         android:numColumns="auto_fit"
