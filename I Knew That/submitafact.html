@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Submit Your Fact</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel='stylesheet' media="screen and (max-width: 600px)" href="media600.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="img/shortcut.png" rel="shortcut icon" type="image/png">
+		<style type="text/css">
+	body {
+		background-image: url("img/background4.jpg");
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 165%;
+	}
+
+	</style>
+</head>
+
+<body class="body">
+<!-- Resposive Navigation -->
+<header>
+<p class="logotext">I knew That ...</p>
+<nav class="nav">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="animals.html">Animals Facts</a></li>
+		<li><a href="food.html">Food Facts</a></li>
+		<li><a href="fun.html">Fun Facts</a></li>
+		<li><a href="technology.html">Technology Facts</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+		<li class="current"><a href="submitafact.html">Submit A Fact</a></li>
+	</ul>
+</nav>
+</header>
+<!-- Grid Layout-->
+<div id="pagewrap">
+
+	<h1>Have you got a fact worth sharing !</h1>
+	<p class="opening">Have you got a <strong>FACT</strong> worth sharing.  Feel free to send us your fact and we will update our archives if relevant.  While posting your <strong>FACT</strong> make sure to include a <strong>TITLE</strong>, <strong>MESSAGE</strong> and a <strong>PICTURE</strong>, along with your details.  We would like to thank you in advance for your interest in <strong>&ldquo; I Knew That ... &rdquo;</strong></p>
+	<p>This website is a completely static website i.e the submit form pages does not actually send any entered data to any servers.  Enjoy</p>
+	<hr>
+	<h1>Fax the Fact</h1>
+	<div class="wrapper fullwidth">
+	
+		<article class="col">
+			<form class="form" method="POST" enctype="multipart/form-data" action="">   
+			    <p> <label>Name <em> required * </em></label> </p>
+			    <p> <input type="text" required="required" autofocus="autofocus" /> </p>
+
+			    <p> <label>Email <em> required * </em></label> </p>
+			    <p> <input type="email" required="required"/> </p>
+
+			    <p> <label>Heading for the Fact <em> required * </em></label> </p>
+			    <p> <input type="text" required="required"/> </p>
+
+			    <p> <label>Text for the Fact <em> required * </em></label> </p>			   
+			    <p class="text"> <textarea required="required"></textarea> </p>
+
+			    <p class="submit">
+			    	<label>Upload an image for the Fact <em> required * </em></label> 
+			    	<input type="file" required="required"/>
+			    </p>
+
+			    <p class="submit"><input type="submit" value="Fax the Fact!" /> </p>
+			    <p class="submit"><input type="reset" value="Clear the fields" /> </p>
+			</form>
+		</article>
+		
+	</div>
+	 <!--/wrapper -->
+	 <hr>
+	<div class="wrapper fullwidth">	
+		<article class="col">
+			<table>
+				<thead>
+					<tr>
+						<th><a href="">SiteMap</a></th>
+						<th><a href="about.html">About</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td><a href="index.html">Home</a></td>
+						<td><a class="boldfont" href="contact.html">Contact Us</a></td></tr>
+						<tr><td><a href="animals.html">Animal Facts</a></td>
+						<td><a class="boldfont" href="submitafact.html">Submit a fact</a></td></tr>
+					<tr><td><a href="food.html">Food Facts</a></td>
+					</tr>
+					<tr><td><a href="fun.html">Fun Facts</a></td></tr>
+					<tr><td><a href="technology.html">Technology Facts</a></td></tr>
+					<tr><td class="copyright">Copyright © 2014 DCU EE437 Web Development Assignment</td></tr>
+				</tbody>
+			</table>
+		</article>	
+	</div>
+
+</div>
+</body>
+
+</html>
