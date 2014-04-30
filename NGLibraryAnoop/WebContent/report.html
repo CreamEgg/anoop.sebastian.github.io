@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Next Generation Library System">
+<meta name="author" content="Anoop Sebastian">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+
+
+<link rel="shortcut icon" href="img/books-icon.png">
+
+<title>NG Library System</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/navbar-fixed-top.css" rel="stylesheet">
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<style type="text/css">
+.page-header {
+	margin-top: 60px;
+}
+
+.spacer {
+	margin-top: 6%;
+}
+
+.fixme {
+	position: fixed;
+}
+
+@media ( max-width : 767px) {
+	.fixme {
+		width: 100%;
+		position: static;
+	}
+}
+</style>
+</head>
+<body>
+	<!-- Fixed navigation bar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/NGLibraryAnoop">Next Generation
+					Library System</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="/NGLibraryAnoop">Home</a></li>
+					<li><a href="books">Books</a></li>
+					<li class="dropdown"><a href=""
+						class="
+						dropdown-toggle" data-toggle="dropdown">Report<b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="report.html#data">Data Storage</a></li>
+							<li><a href="report.html#desc">Description</a></li>
+							<li><a href="report.html#features">Features</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Login Details</li>
+							<li><a href="report.html#userlogin">User Logins</a></li>
+							<li><a href="report.html#adminlogin">Librarian Logins</a></li>
+						</ul></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row spacer">
+		<div class="container">
+			<div class="col-md-12" id="data">
+				<h1 class="page-header">
+					Project Report by <a
+						href="http://ie.linkedin.com/in/anoopsebastian">Anoop
+						Sebastian</a> DME4 10323753
+				</h1>
+				<h1 class="page-header">Data Storage</h1>
+				<p>The Database Tier of this application is managed using the
+					Hibernate ORM Framework. The data model for the database is mapped
+					from objects and the data model generated for each objects are
+					displayed below.</p>
+				<hr>
+				<h4>
+					<strong>The Book Object</strong>
+				</h4>
+				<p>The Book object stores the data about the books stored in the
+					library. Every books contains an ISBN, a title, an author, a
+					category, a description, quantity (10 by default), a cover image
+					path, a rent date (initialised null) and an expiry date
+					(initialised null)</p>
+				<pre>mysql> describe books_sebasta2;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| ISBN        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| author      | varchar(255) | NO   |     | NULL    |                |
+| category    | varchar(255) | NO   |     | NULL    |                |
+| cover       | varchar(255) | YES  |     | NULL    |                |
+| description | blob         | YES  |     | NULL    |                |
+| expiryDate  | varchar(255) | YES  |     | NULL    |                |
+| quantity    | int(11)      | NO   |     | NULL    |                |
+| rentDate    | varchar(255) | YES  |     | NULL    |                |
+| title       | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+</pre>
+				<hr>
+				<h4>
+					<strong>The User Object</strong>
+				</h4>
+				<p>The User object stores information about the registered users
+					in the library. A user has an id (auto generated), an email (unique
+					and used as the username), first name, last name, and a password.</p>
+				<pre>mysql> describe users_sebasta2;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email     | varchar(255) | YES  |     | NULL    |                |
+| firstName | varchar(255) | YES  |     | NULL    |                |
+| lastName  | varchar(255) | YES  |     | NULL    |                |
+| password  | varchar(255) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)</pre>
+
+				<hr>
+				<h4>
+					<strong>The Librarian Object</strong>
+				</h4>
+				<p>The Librarian object stores information about the librarians
+					in the library. Every librarian has a librarian id apart from the
+					normal user details.</p>
+				<pre>mysql> describe librarians_sebasta2;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email       | varchar(255) | YES  |     | NULL    |                |
+| firstName   | varchar(255) | YES  |     | NULL    |                |
+| lastName    | varchar(255) | YES  |     | NULL    |                |
+| librarianID | int(11)      | NO   |     | NULL    |                |
+| password    | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)</pre>
+
+				<hr>
+				<h4>
+					<strong>The Transaction Object</strong>
+				</h4>
+				<p>The Transaction object stores information all the renting and
+					returning transactions happens in the library. All users
+					transactions can be accessed by the appropriate user and librarians
+					can see the full record.</p>
+				<pre>mysql> describe transactions_sebasta2;
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| transactionID   | int(11)      | NO   | PRI | NULL    | auto_increment |
+| bookID          | varchar(255) | NO   |     | NULL    |                |
+| transactionDate | varchar(255) | NO   |     | NULL    |                |
+| transactionType | varchar(255) | NO   |     | NULL    |                |
+| userID          | varchar(255) | NO   |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.02 sec)</pre>
+
+				<hr>
+				<h4>
+					<strong>User's books stored as a Collection</strong>
+				</h4>
+				<p>The rentedbooks_sebasta2 table stores the rented books by all
+					the users. It has a many to many relationship with the book and
+					user objects. The rentedbooks_sebasta2 table stores the userid of
+					the user and the isbn of the book. When a books is returned by the
+					user, the entry is removed from this table.</p>
+				<pre>mysql> describe rentedbooks_sebasta2;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| userid | int(11) | NO   | PRI | NULL    |       |
+| isbn   | int(11) | NO   | PRI | NULL    |       |
++--------+---------+------+-----+---------+-------+
+2 rows in set (0.02 sec)</pre>
+
+				<hr>
+				<h4>
+					<strong>All the data in the database can be initialised
+						using the code below. The below section of code is located in the
+						com.dcu.ee417.util.HibernateUtil.java.</strong>
+				</h4>
+				<pre>HibernateUtil.recreateDatabase();
+
+// Adding book entries to the book_sebasta2 table
+Session hibernateSession = HibernateUtil.beginTransaction(); 
+Set<Book> books  = Utils.intialiseDataFromFile(); 
+
+for(Book book: books) {
+    hibernateSession.save(book);
+}       
+
+HibernateUtil.commitTransaction();
+
+// adding users and admins to tables
+Session hibernateSession = HibernateUtil.beginTransaction(); 
+        
+User anoop = new User("Anoop", "Sebastian", "anoop@a.com", "pass");
+User tom = new User("Tom", "Dunne", "tom@a.com", "pass");
+User sean = new User("Sean", "Quinn", "sean@a.com", "pass");
+        
+Librarian steve = new Librarian("Steve", "Jobs", "steve@a.com", "pass", 1234);
+Librarian bill = new Librarian("Bill", "Gates", "bill@a.com", "pass", 3456);
+        
+hibernateSession.save(anoop); hibernateSession.save(tom); hibernateSession.save(sean);
+hibernateSession.save(steve); hibernateSession.save(bill);
+        
+HibernateUtil.commitTransaction();
+				</pre>
+
+			</div>
+			<div class="col-md-12" id="desc">
+				<h1 class="page-header">Project Description</h1>
+				<p>
+					The Next Generation Library System features a library system where
+					anyone can lookup the library information and the books that are
+					available. <br> <br>Users need to register in order to be
+					able to rent books from the library. Once registered, users can log
+					in and rent as many books as they want. Each book can be rented for
+					five days and must be returned by the the expiry date. Once the
+					user logs in they are able to see the books they have rented, the
+					books they have returned and the due dates of the books that have
+					currently rented.<br> Librarians manage the library.
+					Librarians requires their Librarian ID in order to register
+					themselves as an librarian. Librarians can see all the activities
+					in the library, view currently rented books by the users, all
+					registered users' information. Librarians can assign a book to a
+					user and they can also modify an expiry date for a user's book.
+				</p>
+			</div>
+			<div class="col-md-12" id="features">
+				<h1 class="page-header">Features</h1>
+				<h4>
+					<strong>Responsive design</strong>
+				</h4>
+				<p>The front-end framework Boostrap is used to develop a
+					responsive website that works across different devices</p>
+				<hr>
+
+				<h4>
+					<strong>Fixed Title Bar</strong>
+				</h4>
+				<p>The Title Bar remains on top no matter wherever the user
+					browses to in the website. This enables the user to access all the
+					main links from any page.</p>
+				<hr>
+
+				<h4>
+					<strong>AJAX enables Login/Register system with serverside
+						validation.</strong>
+				</h4>
+				<p>The login and registration is handled using AJAX and if the
+					credentials entered are wrong the user is notified with an
+					appropriate message.</p>
+				<hr>
+
+				<h4>
+					<strong>Books Gallery and Detailed Book View</strong>
+				</h4>
+				<p>The books in the library is categorised in to different
+					sections and displayed with a cover image. Clicking on the cover
+					image will takes the user to a more detailed page where further
+					information about the books is displayed.</p>
+				<hr>
+
+				<h4>
+					<strong>Books Rentals</strong>
+				</h4>
+				<p>If a user is signed in, they are able to rent a book from the
+					library.</p>
+				<hr>
+
+				<h4>
+					<strong>Books Returns</strong>
+				</h4>
+				<p>The books rented by a User can be returned to the library.</p>
+				<hr>
+
+				<h4>
+					<strong>Detailed User Profile and User Book management</strong>
+				</h4>
+				<p>Once the User logs in, the user is able to view the currently
+					rented books by the user. The returned books by the user and the
+					due dates for currently rented books can also be accessed from the
+					user profile page. The rental and returns operations displays
+					instant feedback on the user's profile page.</p>
+				<hr>
+
+				<h4>
+					<strong>Search Functionality <small>Case Sensitive</small></strong>
+				</h4>
+				<p>Using the search bar, anyone is able to search books. The
+					search results will automatically filter the books by the title and
+					author and display the results.</p>
+				<hr>
+
+				<h4>
+					<strong>Admin Dashboard</strong>
+				</h4>
+				<p>A librarian can access the Library Dashboard, where all the
+					trasaction records, currently rented books from the library, the
+					Users registered in the library are displayed.</p>
+				<hr>
+
+				<h4>
+					<strong>Admin Book Assign</strong>
+				</h4>
+				<p>A Librarian can assign a Books to a User by specifing the
+					User's ID and the Books's ISBN</p>
+				<hr>
+
+				<h4>
+					<strong>Admin Update Expiry Date</strong>
+				</h4>
+				<p>Librarians can update the expriry dates of the rented books
+					by any user. Select the user from the Library Dashboard page and
+					specify the number of days to increment or decrement the expiry
+					date.</p>
+			</div>
+			<div class="col-md-12" id="userlogin">
+				<h1 class="page-header">User Logins</h1>
+				<p>
+					To sign in click the <strong>Sign In / Register</strong> link on
+					the title bar.
+				</p>
+				<p>The email field is used as the username.</p>
+				<pre>mysql> select *  from users_sebasta2;
++----+-------------+-----------+-----------+----------+
+| id | email       | firstName | lastName  | password |
++----+-------------+-----------+-----------+----------+
+|  1 | anoop@a.com | Anoop     | Sebastian | pass     |
+|  2 | tom@a.com   | Tom       | Dunne     | pass     |
+|  3 | sean@a.com  | Sean      | Quinn     | pass     |
++----+-------------+-----------+-----------+----------+
+3 rows in set (0.00 sec)</pre>
+			</div>
+			<div class="col-md-12" id="adminlogin">
+				<h1 class="page-header">Librarian Logins</h1>
+				<p>
+					To sign in click the <strong>Sign In / Register</strong> link on
+					the title bar.
+				</p>
+				<p>
+					The email field is used as the username. Check the <strong>I'm
+						a Librarian</strong> to log in as a librarian.
+				</p>
+				<pre>mysql> select *  from librarians_sebasta2;
++----+-------------+-----------+----------+-------------+----------+
+| id | email       | firstName | lastName | librarianID | password |
++----+-------------+-----------+----------+-------------+----------+
+|  1 | steve@a.com | Steve     | Jobs     |        1234 | pass     |
+|  2 | bill@a.com  | Bill      | Gates    |        3456 | pass     |
++----+-------------+-----------+----------+-------------+----------+
+2 rows in set (0.00 sec)</pre>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
