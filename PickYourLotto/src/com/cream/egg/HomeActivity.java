@@ -27,7 +27,7 @@ public class HomeActivity extends Activity
 	private Set<Integer> randomNumbers = null;
 	Integer[] numbers;
 	private static final int numbers_per_row = 6;
-	private static final String adID = "ca-app-pub-2142028847774056/1452609723";
+	private static final String adID = "private key";
 	private static final Integer[] icons = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four,
 						  R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight,
 						  R.drawable.nine, R.drawable.ten, R.drawable.eleven, R.drawable.twelve,
@@ -77,7 +77,6 @@ public class HomeActivity extends Activity
 		//lottoRow_1 = (GridView)findViewById(R.id.gridview1);
 		//lottoRow_2 = (GridView)findViewById(R.id.gridview2);
 		
-		//adView = new AdView(this, AdSize.BANNER,"ca-app-pub-2142028847774056/1452609723");
 		adView = new AdView(this, AdSize.BANNER,adID);
 		LinearLayout layout = (LinearLayout)findViewById(R.id.homelayout);
 		

@@ -31,10 +31,6 @@ public class CustomGridAdapter extends BaseAdapter
 			//inflate layout file
 			gridView = inflater.inflate(R.layout.grid_layout, null);
 			
-			//set the value in textfield
-			//TextView grid_label = (TextView) gridView.findViewById(R.id.grid_item_label);
-			//grid_label.setText(ids[position]);
-			
 			// set image based on selected text
 			ImageView imageView = (ImageView) gridView.findViewById(R.id.grid_item_image);
 			 
